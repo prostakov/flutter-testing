@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+class LanguageCubit extends Cubit<Locale> {
+  LanguageCubit() : super(Locale('uz'));
+
+  void selectEngLanguage() {
+    emit(Locale('en'));
+  }
+
+  void selectArabicLanguage() {
+    emit(Locale('ar'));
+  }
+
+  void selectPortugueseLanguage() {
+    emit(Locale('pt'));
+  }
+
+  void selectFrenchLanguage() {
+    emit(Locale('fr'));
+  }
+
+  void selectUzbekLanguage() {
+    emit(Locale('uz'));
+  }
+
+  void selectSpanishLanguage() {
+    emit(Locale('es'));
+  }
+
+  void selectLanguage(String lang) {
+    emit(Locale(lang));
+  }
+}
