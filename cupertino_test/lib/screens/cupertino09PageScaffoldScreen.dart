@@ -7,11 +7,23 @@ class Cupertino09PageScaffoldScreen extends StatefulWidget {
 }
 
 class _Cupertino09PageScaffoldScreenState extends State<Cupertino09PageScaffoldScreen> {
+  String backgroundImageUrl = "https://i.pinimg.com/originals/c0/40/7f/c0407fadd8f5db63c3d8e35295fa7941.jpg";
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: DefaultHeader(title: 'CupertinoPageScaffold'),
-      child: Center(child: Text('TODO')),
+      navigationBar: CupertinoNavigationBar(
+        backgroundColor: CupertinoColors.systemGrey.withOpacity(0.4),
+        middle: Text("CupertinoPageScaffold"),
+      ),
+      child: Stack(
+        children: [
+          Image.network(
+            backgroundImageUrl,
+            fit: BoxFit.cover,
+            height: double.infinity,
+          ),
+        ],
+      ),
     );
   }
 }
