@@ -10,156 +10,45 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   var buttonPadding = const EdgeInsets.only(top: 20, left: 10, right: 10);
+  var buttonInnerPadding = const EdgeInsets.all(0);
+
+  var routeLabelsMap = {
+    Routes.cupertinoPageScaffold: '01 - CupertinoPageScaffold',
+    Routes.cupertinoActionSheetAction: '02 - CupertinoActionSheetAction',
+    Routes.cupertinoActivityIndicator: '03 - CupertinoActivityIndicator',
+    Routes.cupertinoAlertDialog: '04 - CupertinoAlertDialog',
+    Routes.cupertinoButton: '05 - CupertinoButton',
+    Routes.cupertinoContextMenu: '06 - CupertinoContextMenu',
+    Routes.cupertinoDatePicker: '07 - CupertinoDatePicker',
+    Routes.cupertinoPageRoute: '08 - CupertinoPageRoute',
+    Routes.cupertinoPageScaffold2: '09 - CupertinoPageScaffold2',
+    Routes.cupertinoPicker: '10 - CupertinoPicker',
+    Routes.cupertinoPopupSurface: '11 - CupertinoPopupSurface',
+    Routes.cupertinoScrollBar: '12 - CupertinoScrollBar',
+    Routes.cupertinoSearchTextField: '13 - CupertinoSearchTextField',
+    Routes.cupertinoSegmentedControl: '14 - CupertinoSegmentedControl',
+    Routes.cupertinoSlider: '15 - CupertinoSlider',
+    Routes.cupertinoSlidingSegmentedControl: '16 - CupertinoSlidingSegmentedControl',
+    Routes.cupertinoSwitch: '17 - CupertinoSwitch',
+    Routes.cupertinoTabScaffold: '18 - CupertinoTabScaffold',
+    Routes.cupertinoTabBar: '19 - CupertinoTabBar',
+    Routes.cupertinoTabView: '20 - CupertinoTabView',
+    Routes.cupertinoTextField: '21 - CupertinoTextField',
+  };
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: DefaultHeader(),
       child: ListView(children: [
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoPageScaffold),
-            child: const Text('CupertinoPageScaffold'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoActionSheetAction),
-            child: const Text('CupertinoActionSheetAction'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoActivityIndicator),
-            child: const Text('CupertinoActivityIndicator'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoAlertDialog),
-            child: const Text('CupertinoAlertDialog'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoButton),
-            child: const Text('CupertinoButton'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoContextMenu),
-            child: const Text('CupertinoContextMenu'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoDatePicker),
-            child: const Text('CupertinoDatePicker'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoPageRoute),
-            child: const Text('CupertinoPageRoute'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoPageScaffold2),
-            child: const Text('CupertinoPageScaffold2'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoPicker),
-            child: const Text('CupertinoPicker'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoPopupSurface),
-            child: const Text('CupertinoPopupSurface'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoScrollBar),
-            child: const Text('CupertinoScrollBar'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoSearchTextField),
-            child: const Text('CupertinoSearchTextField'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoSegmentedControl),
-            child: const Text('CupertinoSegmentedControl'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoSlider),
-            child: const Text('CupertinoSlider'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoSlidingSegmentedControl),
-            child: const Text('CupertinoSlidingSegmentedControl'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoSwitch),
-            child: const Text('CupertinoSwitch'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoTabScaffold),
-            child: const Text('CupertinoTabScaffold'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoTabBar),
-            child: const Text('CupertinoTabBar'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoTabView),
-            child: const Text('CupertinoTabView'),
-          ),
-        ),
-        Padding(
-          padding: buttonPadding,
-          child: CupertinoButton.filled(
-            onPressed: () => Navigator.pushNamed(context, Routes.cupertinoTextField),
-            child: const Text('CupertinoTextField'),
+        ...routeLabelsMap.entries.map(
+          (keyValue) => Padding(
+            padding: buttonPadding,
+            child: CupertinoButton.filled(
+              padding: buttonInnerPadding,
+              onPressed: () => Navigator.pushNamed(context, keyValue.key),
+              child: Text(keyValue.value),
+            ),
           ),
         ),
       ]),
