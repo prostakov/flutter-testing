@@ -13,7 +13,7 @@ class _Cupertino03ActivityIndicatorScreenState extends State<Cupertino03Activity
       navigationBar: DefaultHeader(title: 'CupertinoActivityIndicator'),
       child: Center(
         child: CupertinoActivityIndicator(
-          radius: 50,
+          radius: 30,
           color: CupertinoTheme.of(context).primaryColor,
         ),
       ),
