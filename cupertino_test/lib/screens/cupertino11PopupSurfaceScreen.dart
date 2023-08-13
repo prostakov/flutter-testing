@@ -12,12 +12,31 @@ class _Cupertino11PopupSurfaceScreenState extends State<Cupertino11PopupSurfaceS
     return CupertinoPageScaffold(
       navigationBar: DefaultHeader(title: 'CupertinoPopupSurface'),
       child: Center(
-        child: CupertinoButton(
-          child: const Text('Open Popup'),
-          onPressed: () => showCupertinoModalPopup(
-            context: context,
-            builder: (BuildContext builder) => CupertinoPopupSurface(child: Container()),
-          ),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CupertinoButton.filled(
+              child: Text('Click'),
+              onPressed: () => showCupertinoModalPopup(
+                context: context,
+                builder: (BuildContext builder) => CupertinoPopupSurface(
+                  child: Container(
+                    color: CupertinoColors.white,
+                    alignment: Alignment.center,
+                    width: double.infinity,
+                    height: 400,
+                    child: Center(
+                      child: CupertinoButton(
+                        child: Text('Close'),
+                        onPressed: () => Navigator.pop(context),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
