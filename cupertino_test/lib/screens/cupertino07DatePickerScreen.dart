@@ -15,24 +15,31 @@ class _Cupertino07DatePickerScreenState extends State<Cupertino07DatePickerScree
     return CupertinoPageScaffold(
       navigationBar: DefaultHeader(title: 'CupertinoDatePicker'),
       child: Center(
-        child: CupertinoButton.filled(
-          child: Text('Select Date'),
-          onPressed: () {
-            showCupertinoModalPopup<void>(
-              context: context,
-              builder: (BuildContext context) => SizedBox(
-                height: 250,
-                child: CupertinoDatePicker(
-                  initialDateTime: dateTime,
-                  mode: CupertinoDatePickerMode.dateAndTime,
-                  use24hFormat: true,
-                  onDateTimeChanged: (DateTime newDate) {
-                    setState(() => dateTime = newDate);
-                  },
-                ),
-              ),
-            );
-          },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Current date: ${dateTime.day}/${dateTime.month}/${dateTime.year}'),
+            SizedBox(height: 20),
+            CupertinoButton.filled(
+              child: Text('Select Date'),
+              onPressed: () {
+                showCupertinoModalPopup<void>(
+                  context: context,
+                  builder: (BuildContext context) => SizedBox(
+                    height: 250,
+                    child: CupertinoDatePicker(
+                      initialDateTime: dateTime,
+                      mode: CupertinoDatePickerMode.dateAndTime,
+                      use24hFormat: true,
+                      onDateTimeChanged: (DateTime newDate) {
+                        setState(() => dateTime = newDate);
+                      },
+                    ),
+                  ),
+                );
+              },
+            ),
+          ],
         ),
       ),
     );
