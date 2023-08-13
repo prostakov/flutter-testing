@@ -24,7 +24,7 @@ class _Cupertino07DatePickerScreenState extends State<Cupertino07DatePickerScree
                 height: 250,
                 child: CupertinoDatePicker(
                   initialDateTime: dateTime,
-                  mode: CupertinoDatePickerMode.date,
+                  mode: CupertinoDatePickerMode.dateAndTime,
                   use24hFormat: true,
                   onDateTimeChanged: (DateTime newDate) {
                     setState(() => dateTime = newDate);
