@@ -11,7 +11,15 @@ class _Cupertino11PopupSurfaceScreenState extends State<Cupertino11PopupSurfaceS
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: DefaultHeader(title: 'CupertinoPopupSurface'),
-      child: Center(child: Text('TODO')),
+      child: Center(
+        child: CupertinoButton(
+          child: const Text('Open Popup'),
+          onPressed: () => showCupertinoModalPopup(
+            context: context,
+            builder: (BuildContext builder) => CupertinoPopupSurface(child: Container()),
+          ),
+        ),
+      ),
     );
   }
 }
