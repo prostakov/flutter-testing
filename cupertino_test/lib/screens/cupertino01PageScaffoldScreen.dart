@@ -11,7 +11,19 @@ class _Cupertino01PageScaffoldScreenState extends State<Cupertino01PageScaffoldS
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: DefaultHeader(title: 'CupertinoPageScaffold'),
-      child: const Center(child: Text('TODO')),
+      child: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Transform.translate(
+              offset: Offset(0, 1), // Adjust the vertical offset as needed
+              child: Text('Share'),
+            ),
+            SizedBox(width: 5),
+            Icon(CupertinoIcons.share),
+          ],
+        ),
+      ),
     );
   }
 }
