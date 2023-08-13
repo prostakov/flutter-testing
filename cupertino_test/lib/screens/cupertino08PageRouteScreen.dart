@@ -10,8 +10,28 @@ class _Cupertino08PageRouteScreenState extends State<Cupertino08PageRouteScreen>
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: DefaultHeader(title: 'CupertinoPageRoute'),
-      child: Center(child: Text('TODO')),
+      navigationBar: DefaultHeader(title: 'CupertinoButton'),
+      child: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CupertinoButton.filled(
+              onPressed: () => Navigator.of(context).push(CupertinoPageRoute(
+                builder: (BuildContext context) => AnotherPage(),
+              )),
+              child: Text('Navigate to other page'),
+            ),
+          ],
+        ),
+      ),
     );
+  }
+}
+
+class AnotherPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext) {
+    return Center(child: Text('Some other page'));
   }
 }
