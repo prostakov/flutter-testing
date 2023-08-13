@@ -1,3 +1,4 @@
+import 'package:cupertino_test/widgets/default_header.dart';
 import 'package:flutter/cupertino.dart';
 
 class Cupertino06ContextMenuScreen extends StatefulWidget {
@@ -8,7 +9,8 @@ class Cupertino06ContextMenuScreen extends StatefulWidget {
 class _Cupertino06ContextMenuScreenState extends State<Cupertino06ContextMenuScreen> {
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
+    return CupertinoPageScaffold(
+      navigationBar: DefaultHeader(title: 'CupertinoContextMenu'),
       child: Center(child: Text('TODO')),
     );
   }

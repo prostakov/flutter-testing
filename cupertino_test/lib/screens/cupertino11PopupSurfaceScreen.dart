@@ -1,3 +1,4 @@
+import 'package:cupertino_test/widgets/default_header.dart';
 import 'package:flutter/cupertino.dart';
 
 class Cupertino11PopupSurfaceScreen extends StatefulWidget {
@@ -8,7 +9,8 @@ class Cupertino11PopupSurfaceScreen extends StatefulWidget {
 class _Cupertino11PopupSurfaceScreenState extends State<Cupertino11PopupSurfaceScreen> {
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
+    return CupertinoPageScaffold(
+      navigationBar: DefaultHeader(title: 'CupertinoPopupSurface'),
       child: Center(child: Text('TODO')),
     );
   }

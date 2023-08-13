@@ -1,3 +1,4 @@
+import 'package:cupertino_test/widgets/default_header.dart';
 import 'package:flutter/cupertino.dart';
 
 class Cupertino07DatePickerScreen extends StatefulWidget {
@@ -8,7 +9,8 @@ class Cupertino07DatePickerScreen extends StatefulWidget {
 class _Cupertino07DatePickerScreenState extends State<Cupertino07DatePickerScreen> {
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
+    return CupertinoPageScaffold(
+      navigationBar: DefaultHeader(title: 'CupertinoDatePicker'),
       child: Center(child: Text('TODO')),
     );
   }

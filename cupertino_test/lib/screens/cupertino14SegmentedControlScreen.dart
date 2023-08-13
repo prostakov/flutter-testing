@@ -1,3 +1,4 @@
+import 'package:cupertino_test/widgets/default_header.dart';
 import 'package:flutter/cupertino.dart';
 
 class Cupertino14SegmentedControlScreen extends StatefulWidget {
@@ -8,7 +9,8 @@ class Cupertino14SegmentedControlScreen extends StatefulWidget {
 class _Cupertino14SegmentedControlScreenState extends State<Cupertino14SegmentedControlScreen> {
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
+    return CupertinoPageScaffold(
+      navigationBar: DefaultHeader(title: 'CupertinoSegmentedControl'),
       child: Center(child: Text('TODO')),
     );
   }

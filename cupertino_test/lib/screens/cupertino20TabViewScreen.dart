@@ -1,3 +1,4 @@
+import 'package:cupertino_test/widgets/default_header.dart';
 import 'package:flutter/cupertino.dart';
 
 class Cupertino20TabViewScreen extends StatefulWidget {
@@ -8,7 +9,8 @@ class Cupertino20TabViewScreen extends StatefulWidget {
 class _Cupertino20TabViewScreenState extends State<Cupertino20TabViewScreen> {
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
+    return CupertinoPageScaffold(
+      navigationBar: DefaultHeader(title: 'CupertinoTabView'),
       child: Center(child: Text('TODO')),
     );
   }

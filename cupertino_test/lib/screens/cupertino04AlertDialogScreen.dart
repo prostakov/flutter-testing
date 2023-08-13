@@ -1,3 +1,4 @@
+import 'package:cupertino_test/widgets/default_header.dart';
 import 'package:flutter/cupertino.dart';
 
 class Cupertino04AlertDialogScreen extends StatefulWidget {
@@ -8,7 +9,8 @@ class Cupertino04AlertDialogScreen extends StatefulWidget {
 class _Cupertino04AlertDialogScreenState extends State<Cupertino04AlertDialogScreen> {
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
+    return CupertinoPageScaffold(
+      navigationBar: DefaultHeader(title: 'CupertinoAlertDialog'),
       child: Center(child: Text('TODO')),
     );
   }

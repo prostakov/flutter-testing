@@ -22,7 +22,7 @@ import 'package:cupertino_test/screens/cupertino17SwitchScreen.dart';
 import 'package:cupertino_test/screens/cupertino18TabScaffoldScreen.dart';
 import 'package:cupertino_test/screens/cupertino19TabBarScreen.dart';
 import 'package:cupertino_test/screens/cupertino20TabViewScreen.dart';
-import 'package:cupertino_test/screens/cupertino21TextFielScreen.dart';
+import 'package:cupertino_test/screens/cupertino21TextFieldScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,9 +36,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoApp(
       debugShowCheckedModeBanner: false,
-      theme: CupertinoThemeData(
+      theme: const CupertinoThemeData(
         brightness: Brightness.dark,
-        scaffoldBackgroundColor: CupertinoColors.systemGrey2,
+        scaffoldBackgroundColor: Color.fromARGB(255, 18, 32, 47),
         primaryColor: CupertinoColors.systemOrange,
       ),
       localizationsDelegates: const [
@@ -46,24 +46,6 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      // home: CupertinoPageScaffold(
-      //   navigationBar: CupertinoNavigationBar(
-      //     middle: Text('Cupertino App'),
-      //   ),
-      //   child: Center(
-      //     child: Row(
-      //       mainAxisAlignment: MainAxisAlignment.center,
-      //       children: [
-      //         Transform.translate(
-      //           offset: Offset(0, 1), // Adjust the vertical offset as needed
-      //           child: Text('Share'),
-      //         ),
-      //         SizedBox(width: 5),
-      //         Icon(CupertinoIcons.share),
-      //       ],
-      //     ),
-      //   ),
-      // ),
       initialRoute: Routes.home,
       routes: <String, WidgetBuilder>{
         Routes.home: (BuildContext context) => HomeScreen(),
@@ -87,7 +69,7 @@ class MyApp extends StatelessWidget {
         Routes.cupertinoTabScaffold: (BuildContext context) => Cupertino18TabScaffoldScreen(),
         Routes.cupertinoTabBar: (BuildContext context) => Cupertino19TabBarScreen(),
         Routes.cupertinoTabView: (BuildContext context) => Cupertino20TabViewScreen(),
-        Routes.cupertinoTextField: (BuildContext context) => Cupertino21TextFielScreen(),
+        Routes.cupertinoTextField: (BuildContext context) => Cupertino21TextFieldScreen(),
       },
       onGenerateRoute: (settings) {
         return null;

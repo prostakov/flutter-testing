@@ -1,3 +1,4 @@
+import 'package:cupertino_test/widgets/default_header.dart';
 import 'package:flutter/cupertino.dart';
 
 class Cupertino05ButtonScreen extends StatefulWidget {
@@ -8,7 +9,8 @@ class Cupertino05ButtonScreen extends StatefulWidget {
 class _Cupertino05ButtonScreenState extends State<Cupertino05ButtonScreen> {
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
+    return CupertinoPageScaffold(
+      navigationBar: DefaultHeader(title: 'CupertinoButton'),
       child: Center(child: Text('TODO')),
     );
   }

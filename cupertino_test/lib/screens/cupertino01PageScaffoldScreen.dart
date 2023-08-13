@@ -1,3 +1,4 @@
+import 'package:cupertino_test/widgets/default_header.dart';
 import 'package:flutter/cupertino.dart';
 
 class Cupertino01PageScaffoldScreen extends StatefulWidget {
@@ -9,16 +10,8 @@ class _Cupertino01PageScaffoldScreenState extends State<Cupertino01PageScaffoldS
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        leading: GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Icon(CupertinoIcons.left_chevron),
-        ),
-        middle: const Text("Kurwa!"),
-      ),
-      child: Center(child: Text('Kurwa Bleat!')),
+      navigationBar: DefaultHeader(title: 'CupertinoPageScaffold'),
+      child: const Center(child: Text('TODO')),
     );
   }
 }

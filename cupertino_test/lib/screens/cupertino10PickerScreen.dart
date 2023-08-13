@@ -1,3 +1,4 @@
+import 'package:cupertino_test/widgets/default_header.dart';
 import 'package:flutter/cupertino.dart';
 
 class Cupertino10PickerScreen extends StatefulWidget {
@@ -8,7 +9,8 @@ class Cupertino10PickerScreen extends StatefulWidget {
 class _Cupertino10PickerScreenState extends State<Cupertino10PickerScreen> {
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
+    return CupertinoPageScaffold(
+      navigationBar: DefaultHeader(title: 'CupertinoPicker'),
       child: Center(child: Text('TODO')),
     );
   }
