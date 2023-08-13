@@ -11,7 +11,12 @@ class _Cupertino03ActivityIndicatorScreenState extends State<Cupertino03Activity
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: DefaultHeader(title: 'CupertinoActivityIndicator'),
-      child: Center(child: Text('TODO')),
+      child: Center(
+        child: CupertinoActivityIndicator(
+          radius: 50,
+          color: CupertinoTheme.of(context).primaryColor,
+        ),
+      ),
     );
   }
 }
