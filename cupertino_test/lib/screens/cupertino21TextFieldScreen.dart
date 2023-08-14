@@ -7,11 +7,16 @@ class Cupertino21TextFieldScreen extends StatefulWidget {
 }
 
 class _Cupertino21TextFieldScreenState extends State<Cupertino21TextFieldScreen> {
+  final TextEditingController _textEditingController = new TextEditingController(text: "Some text");
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: DefaultHeader(title: 'CupertinoTextField'),
-      child: Center(child: Text('TODO')),
+      child: Center(
+        child: CupertinoTextField(
+          controller: _textEditingController,
+        ),
+      ),
     );
   }
 }
