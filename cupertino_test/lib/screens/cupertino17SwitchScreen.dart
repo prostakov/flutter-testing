@@ -7,11 +7,24 @@ class Cupertino17SwitchScreen extends StatefulWidget {
 }
 
 class _Cupertino17SwitchScreenState extends State<Cupertino17SwitchScreen> {
+  bool isSelected = false;
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: DefaultHeader(title: 'CupertinoSwitch'),
-      child: Center(child: Text('TODO')),
+      child: Center(
+        child: Column(
+          children: [
+            const SizedBox(height: 50),
+            Text('IsSelected: ${isSelected}'),
+            const SizedBox(height: 20),
+            CupertinoSwitch(
+              value: isSelected,
+              onChanged: (value) => setState(() => isSelected = value),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
