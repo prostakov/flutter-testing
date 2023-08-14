@@ -7,11 +7,29 @@ class Cupertino18TabScaffoldScreen extends StatefulWidget {
 }
 
 class _Cupertino18TabScaffoldScreenState extends State<Cupertino18TabScaffoldScreen> {
+  double _currentValue = 2;
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: DefaultHeader(title: 'CupertinoTabScaffold'),
-      child: Center(child: Text('TODO')),
+      child: SizedBox(
+        width: double.infinity,
+        child: Column(
+          children: [
+            const SizedBox(height: 50),
+            Text('${_currentValue}'),
+            const SizedBox(height: 50),
+            CupertinoSlider(
+              value: _currentValue,
+              min: 0,
+              max: 10,
+              divisions: 10,
+              onChanged: (value) => setState(() => _currentValue = value),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
