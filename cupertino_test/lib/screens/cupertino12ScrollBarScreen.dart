@@ -11,7 +11,17 @@ class _Cupertino12ScrollBarScreenState extends State<Cupertino12ScrollBarScreen>
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: DefaultHeader(title: 'CupertinoScrollBar'),
-      child: Center(child: Text('TODO')),
+      child: CupertinoScrollbar(
+        thickness: 15,
+        thicknessWhileDragging: 20,
+        radius: Radius.circular(20),
+        radiusWhileDragging: Radius.circular(10),
+        child: ListView.builder(
+            itemCount: 50,
+            itemBuilder: (BuildContext context, int index) => Center(
+                  child: Text("Item ${index}", style: TextStyle(fontSize: 15)),
+                )),
+      ),
     );
   }
 }
