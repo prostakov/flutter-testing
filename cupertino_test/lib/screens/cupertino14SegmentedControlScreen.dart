@@ -9,6 +9,7 @@ class Cupertino14SegmentedControlScreen extends StatefulWidget {
 
 class _Cupertino14SegmentedControlScreenState extends State<Cupertino14SegmentedControlScreen> {
   String? _currentText = null;
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
