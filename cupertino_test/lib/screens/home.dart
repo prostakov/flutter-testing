@@ -31,8 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
     Routes.cupertinoSlidingSegmentedControl: '16 - CupertinoSlidingSegmentedControl',
     Routes.cupertinoSwitch: '17 - CupertinoSwitch',
     Routes.cupertinoTabScaffold: '18 - CupertinoTabScaffold',
-    Routes.cupertinoTabBar: '19 - CupertinoTabBar',
-    Routes.cupertinoTabView: '20 - CupertinoTabView',
     Routes.cupertinoTextField: '21 - CupertinoTextField',
   };
 

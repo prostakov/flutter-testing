@@ -18,7 +18,5 @@ class Routes {
   static String cupertinoSlidingSegmentedControl = "/CupertinoSlidingSegmentedControl";
   static String cupertinoSwitch = "/CupertinoSwitch";
   static String cupertinoTabScaffold = "/CupertinoTabScaffold";
-  static String cupertinoTabBar = "/CupertinoTabBar";
-  static String cupertinoTabView = "/CupertinoTabView";
   static String cupertinoTextField = "/CupertinoTextField";
 }

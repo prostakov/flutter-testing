@@ -20,8 +20,6 @@ import 'package:cupertino_test/screens/cupertino15SliderScreen.dart';
 import 'package:cupertino_test/screens/cupertino16SlidingSegmentedControlScreen.dart';
 import 'package:cupertino_test/screens/cupertino17SwitchScreen.dart';
 import 'package:cupertino_test/screens/cupertino18TabScaffoldScreen.dart';
-import 'package:cupertino_test/screens/cupertino19TabBarScreen.dart';
-import 'package:cupertino_test/screens/cupertino20TabViewScreen.dart';
 import 'package:cupertino_test/screens/cupertino21TextFieldScreen.dart';
 
 void main() {
@@ -67,8 +65,6 @@ class MyApp extends StatelessWidget {
         Routes.cupertinoSlidingSegmentedControl: (BuildContext context) => Cupertino16SlidingSegmentedControlScreen(),
         Routes.cupertinoSwitch: (BuildContext context) => Cupertino17SwitchScreen(),
         Routes.cupertinoTabScaffold: (BuildContext context) => Cupertino18TabScaffoldScreen(),
-        Routes.cupertinoTabBar: (BuildContext context) => Cupertino19TabBarScreen(),
-        Routes.cupertinoTabView: (BuildContext context) => Cupertino20TabViewScreen(),
         Routes.cupertinoTextField: (BuildContext context) => Cupertino21TextFieldScreen(),
       },
       onGenerateRoute: (settings) {
